@@ -1,0 +1,23 @@
+@font-face {
+  font-family: 'Arialmt';
+  font-display: swap;
+  src: url('../fonts/Arialmt-Regular.eot');
+  src: url('../fonts/Arialmt-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Arialmt-Regular.woff2') format('woff2'),
+    url('../fonts/Arialmt-Regular.woff') format('woff'),
+    url('../fonts/Arialmt-Regular.ttf') format('truetype'),
+    url('../fonts/Arialmt-Regular.svg#Arialmt-Regular') format('svg');
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Arialmt';
+  font-display: swap;
+  src: url('../fonts/Arialmt-Bold.eot');
+  src: url('../fonts/Arialmt-Bold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Arialmt-Bold.woff2') format('woff2'), url('../fonts/Arialmt-Bold.woff') format('woff'),
+    url('../fonts/Arialmt-Bold.ttf') format('truetype'),
+    url('../fonts/Arialmt-Bold.svg#Arialmt-Bold') format('svg');
+  font-weight: 700;
+  font-style: normal;
+}
