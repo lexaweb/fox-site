@@ -1,38 +1,128 @@
 @import '../mixins/media';
 
 .header {
-  padding: 20px 0;
+  padding-top: 8px;
+  background: #2B2928;
   .inner {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
   &-logo {
-    width: 150px;
+    display: flex;
+    align-items: center;
     a {
       display: block;
+      margin-right: 25px;
       svg {
-        height: 50px;
+        width: 136px;
+        height: 63px;
+      }
+    }
+    .slogan {
+      width: 160px;
+      padding-left: 25px;
+      border-left: 2px solid $yellow;
+      p {
+        font: 400 16px/20px $font;
+        color: $yellow;
       }
     }
   }
   &-menu {
-    position: absolute;
-    display: flex;
-    left: 50%;
-    transform: translateX(-50%);
-    &-item {
-      margin-right: 25px;
-      &:last-child {
-        margin-right: 0;
+    .header-menu {
+      &-top {
+        display: flex;
+        align-items: center;
+        padding-left: 21px;
+        .link {
+          display: block;
+          color: $white;
+          font: 400 16px/27px $font;
+          transition: 0.3s;
+          padding: 10px 0;
+          margin-right: 30px;
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+        .phone {
+          display: inline-flex;
+          align-items: center;
+          margin-left: 45px;
+          transition: 0.3s;
+          &:hover {
+            opacity: 0.7;
+          }
+          svg {
+            width: 26px;
+            height: 26px;
+          }
+          p {
+            font: 400 20px/27px $font;
+            color: $yellow;
+            margin-left: 15px;
+          }
+        }
+      }
+      &-bottom {
+        position: relative;
+        display: flex;
+        align-items: center;
+        padding: 3px 0 3px 21px;
+        background: $black;
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 100%;
+          width: 100%;
+          height: 100%;
+          background: inherit;
+        }
+        .link {
+          display: inline-flex;
+          align-items: center;
+          margin-right: 60px;
+          transition: 0.3s;
+          padding: 10px 0;
+          &:hover {
+            opacity: 0.7;
+          }
+          svg {
+            width: 14px;
+            height: 16px;
+            margin-right: 10px;
+          }
+          p {
+            font: 400 15px/27px $font;
+            color: $yellow;
+            text-transform: uppercase;
+          }
+        }
+        .basket {
+          display: flex;
+          align-items: center;
+          margin-left: auto;
+          background: #535353;
+          transition: 0.3s;
+          width: 210px;
+          height: 40px;
+          padding-left: 10px;
+          &:hover {
+            opacity: 0.7;
+          }
+          svg {
+            width: 33px;
+            height: 25px;
+          }
+          p {
+            font: 400 13px/20px $font;
+            color: $white;
+            margin-left: 25px;
+          }
+        }
       }
     }
-  }
-  &-mb {
-    cursor: pointer;
-    width: 25px;
-    height: 25px;
-    background: #000;
-    border-radius: 50%;
   }
 }

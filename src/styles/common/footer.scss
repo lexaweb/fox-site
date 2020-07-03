@@ -1,3 +1,138 @@
-@import '../mixins/media';
+@import "../mixins/media";
 
-// footer {}
+.footer {
+  background: #28292b;
+  border-top: 7px solid $yellow;
+  padding: 30px 0;
+  .inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .map-site {
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px;
+    h1 {
+      font: 400 15px/27px $font;
+      color: $white;
+      margin-bottom: 20px;
+    }
+    .phone {
+      display: flex;
+      align-items: center;
+      margin-bottom: 15px;
+      transition: 0.3s;
+      &:hover {
+        opacity: 0.7;
+      }
+      svg {
+        width: 26px;
+        height: 26px;
+      }
+      p {
+        font: 400 20px/27px $font;
+        color: $white;
+        margin-left: 5px;
+      }
+    }
+    .email {
+      font: 400 15px/1 $font;
+      color: $white;
+      border-bottom: 1px solid $white;
+      transition: 0.3s;
+      margin-bottom: 5px;
+      display: inline-block;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    .map {
+      font: 400 15px/1 $font;
+      color: $white;
+      border-bottom: 1px dashed $white;
+      transition: 0.3s;
+      margin-bottom: 40px;
+      display: inline-block;
+      &:hover {
+        opacity: 0.7;
+      }
+    }
+    .pict {
+      display: flex;
+      align-items: center;
+      margin-bottom: 70px;
+      transition: 0.3s;
+      &:hover {
+        opacity: 0.7;
+      }
+      svg {
+        width: 26px;
+        height: 26px;
+      }
+      p {
+        font: 400 20px/27px $font;
+        color: $white;
+        margin-left: 5px;
+        text-decoration: underline;
+      }
+    }
+  }
+  .menu {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    width: 70%;
+    .company,
+    .product,
+    .support {
+      min-width: 240px;
+      h2 {
+        font: 400 18px/27px $font;
+        color: $white;
+        text-transform: uppercase;
+        border-bottom: 2px solid $yellow;
+        margin-bottom: 25px;
+        span {
+          position: relative;
+          &::after {
+            content: ''; 
+            position: absolute; 
+            right: -17px; 
+            top: 40%;
+            border: 5px solid transparent;
+            border-top: 5px solid $white;
+           }
+        }
+      }
+      .links {
+        a {
+          font: 400 15px/27px $font;
+          color: $white;
+          transition: 0.3s;
+          &:hover {
+            opacity: 0.7;
+          }
+        }
+      }
+    }
+    .company,
+    .product {
+      margin-right: 25px;
+    }
+  }
+  .copiright {
+    p {
+      font: 400 15px/27px $font;
+      color: $white;
+      a {
+        font: 400 15px/27px $font;
+        color: $white;
+        display: inline-block;
+        text-decoration: underline;
+      }
+    }
+  }
+}
