@@ -23,5 +23,12 @@ $(document).ready(function () {
   $('.hamburger').click(function () {
     $(this).toggleClass('active');
     $('.header-menu-all').toggleClass('active');
+    var width = $('.header-menu-all').width();
+    $(".hamburger").css('right', 120 + $(".header-menu-all").width());
+    // if () {
+    //   alert( 'Да вы знаток!' );
+    // } else {
+    //   alert( 'А вот и неправильно!' ); // любое значение, кроме 2015
+    // }
   });
 });
