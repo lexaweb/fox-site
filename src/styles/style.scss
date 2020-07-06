@@ -3,11 +3,16 @@
 @import 'common/footer';
 
 body {
+  background: #28292b;
   .wrapper {
     overflow: hidden;
     .inner {
       max-width: 1240px;
       margin: 0 auto;
+      position: relative;
+      @include media-laptop {
+        max-width: 740px;
+      }
     }
     .news {
       position: relative;
@@ -36,15 +41,18 @@ body {
       }
       &-item {
         position: relative;
-        background-size: contain;
-        width: 408px;
-        height: 172px;
         margin-right: 10px;
-        .text {
+        &:last-child {
+          margin-right: 0;
+        }
+        .news-text {
           position: absolute;
-          top: 20px;
-          left: 20px;
-          font: 400 20px/27px $font;
+          padding: 20px 0 0 20px;
+          font: 400 20px/1.5 $font;
+          @include media-laptop {
+            font: 400 15px/1.5 $font;
+            padding: 10px 0 0 10px;
+          }
           p {
             color: $black;
             width: 230px;
@@ -60,7 +68,6 @@ body {
         }
         a {
           position: absolute;
-          left: 20px;
           bottom: 5px;
           font: 400 15px/27px $font;
           color: $black;
@@ -68,12 +75,15 @@ body {
           transition: 0.3s;
           height: auto;
           display: inline-block;
+          padding-left: 20px;
+          @include media-laptop {
+            padding-left: 10px;
+          }
           &:hover {
             opacity: 0.7;
           }
         }
-        .new,
-        .stock {
+        .new {
           position: absolute;
           padding: 5px 15px;
           top: 0;
@@ -83,12 +93,18 @@ body {
           justify-content: center;
           font: 400 20px/27px $font;
           color: $white;
-        }
-        .new {
           background: #39b54a;
         }
         .stock {
           background: #ed1c24;
+        }
+        @include media-laptop {
+          &-image {
+            img {
+              height: 123px;
+              object-fit: cover;
+            }
+          }
         }
       }
     }

@@ -82,13 +82,15 @@
   .menu {
     display: flex;
     align-items: flex-start;
-    flex-wrap: wrap;
     justify-content: flex-end;
     width: 70%;
     .company,
     .product,
     .support {
       min-width: 240px;
+      @include media-laptop {
+        min-width: 160px;
+      }
       h2 {
         font: 400 18px/27px $font;
         color: $white;
