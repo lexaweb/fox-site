@@ -1,9 +1,9 @@
 @import "../mixins/media";
 
 .footer {
+  padding: 30px 0;
   background: #28292b;
   border-top: 7px solid $yellow;
-  padding: 30px 0;
   .inner {
     display: flex;
     justify-content: space-between;
@@ -12,8 +12,8 @@
   }
   .map-site {
     display: flex;
-    flex-wrap: wrap;
     width: 200px;
+    flex-wrap: wrap;
     h1 {
       font: 400 15px/27px $font;
       color: $white;
@@ -38,23 +38,23 @@
       }
     }
     .email {
+      display: inline-block;
       font: 400 15px/1 $font;
       color: $white;
       border-bottom: 1px solid $white;
       transition: 0.3s;
       margin-bottom: 5px;
-      display: inline-block;
       &:hover {
         opacity: 0.7;
       }
     }
     .map {
+      display: inline-block;
       font: 400 15px/1 $font;
       color: $white;
+      margin-bottom: 40px;
       border-bottom: 1px dashed $white;
       transition: 0.3s;
-      margin-bottom: 40px;
-      display: inline-block;
       &:hover {
         opacity: 0.7;
       }
@@ -81,9 +81,9 @@
   }
   .menu {
     display: flex;
+    width: 70%;
     align-items: flex-start;
     justify-content: flex-end;
-    width: 70%;
     .company,
     .product,
     .support {
@@ -94,19 +94,19 @@
       h2 {
         font: 400 18px/27px $font;
         color: $white;
-        text-transform: uppercase;
-        border-bottom: 2px solid $yellow;
         margin-bottom: 25px;
+        border-bottom: 2px solid $yellow;
+        text-transform: uppercase;
         span {
           position: relative;
           &::after {
-            content: ''; 
-            position: absolute; 
-            right: -17px; 
+            content: "";
+            position: absolute;
+            right: -17px;
             top: 40%;
             border: 5px solid transparent;
             border-top: 5px solid $white;
-           }
+          }
         }
       }
       .links {
@@ -130,9 +130,9 @@
       font: 400 15px/27px $font;
       color: $white;
       a {
+        display: inline-block;
         font: 400 15px/27px $font;
         color: $white;
-        display: inline-block;
         text-decoration: underline;
       }
     }

@@ -1,7 +1,7 @@
-@import '../mixins/media';
+@import "../mixins/media";
 
 .header {
-  background: #2B2928;
+  background: #2b2928;
   .inner {
     display: flex;
     justify-content: space-between;
@@ -94,7 +94,7 @@
           background: transparent;
         }
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           top: 0;
           left: 100%;
@@ -127,12 +127,12 @@
         }
         .basket {
           display: flex;
+          width: 210px;
+          height: 40px;
           align-items: center;
           margin-left: auto;
           background: #535353;
           transition: 0.3s;
-          width: 210px;
-          height: 40px;
           padding-left: 10px;
           @include media-laptop {
             width: 150px;
@@ -141,9 +141,21 @@
           &:hover {
             opacity: 0.7;
           }
-          svg {
-            width: 33px;
-            height: 25px;
+          .basket-icon {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            img {
+              width: 33px;
+              height: 25px;
+            }
+            span {
+              position: absolute;
+              font: 400 12px/1px $font;
+              color: $black;
+              padding-right: 5px;
+            }
           }
           p {
             font: 400 13px/20px $font;
@@ -158,12 +170,12 @@
           display: block;
         }
         .hamburger {
-          display: none;
           position: absolute;
-          width: 66px;
-          height: 100%;
           top: 0;
           right: 0;
+          display: none;
+          width: 66px;
+          height: 100%;
           align-items: center;
           flex-wrap: wrap;
           justify-content: center;
@@ -174,32 +186,31 @@
           &-button {
             display: block;
             span {
-              background: $white;
+              display: block;
               width: 25px;
               height: 4px;
-              display: block;
               margin: 4px 0;
+              background: $white;
               transition: 0.3s;
             }
-        }
-        @include media-laptop {
-          display: flex;
-        }
+          }
+          @include media-laptop {
+            display: flex;
+          }
         }
         .hamburger.active {
           background: $yellow;
-          right: 287px;
           span {
             &:nth-child(1) {
-              transform: rotate(-45deg);
               margin: -4px;
+              transform: rotate(-45deg);
             }
             &:nth-child(2) {
               display: none;
             }
             &:nth-child(3) {
-              transform: rotate(45deg);
               margin: -4px;
+              transform: rotate(45deg);
             }
           }
         }
@@ -207,13 +218,13 @@
           position: absolute;
           top: 0;
           right: 0;
+          z-index: 1;
+          padding: 40px 60px;
+          background: #2b2928;
           opacity: 0;
           visibility: hidden;
-          background: #2b2928;
           transform: translateX(100%);
-          z-index: 1;
           transition: 0.3s;
-          padding: 40px 60px;
           .header-menu {
             &-top,
             &-bottom {
@@ -229,7 +240,7 @@
         }
       }
       &-mb {
-        .header-menu-all.active  {
+        .header-menu-all.active {
           transform: translateX(0);
           opacity: 1;
           visibility: visible;
