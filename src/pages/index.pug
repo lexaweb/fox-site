@@ -3,36 +3,40 @@ extends common/layout
 block variables
   -var pageTitle ='Главная'
 
+  -
+    var newsItem =[
+      {text1: 'Новая линейка', 
+      text2: 'IP камер', 
+      text3: 'серия LS', 
+      a: 'Подробнее', 
+      new: 'NEW', 
+      img: 'img/new-1.png'},
+      {text1: 'Новая линейка', 
+      text2: 'домофонов', 
+      text3: 'с IPS дисплеем', 
+      a: 'Подробнее', 
+      new: 'NEW', 
+      img: 'img/new-2.png'},
+      {text1: 'Вызывные панели', 
+      text2: 'со встроенным', 
+      text3: 'считывателем', 
+      a: 'Подробнее', 
+      new: 'NEW', 
+      img: 'img/new-3.png'}]
+
 block content
   main
     .banner
       img(src="img/banner.jpg", alt="banner")
     .inner
       .news
-        .news-item
-          .news-text
-            p Новая линейка 
-            p IP камер  
-            p серия LS
-          a(href="news.html") Подробнее
-          .new NEW
-          .news-item-image
-            img(src="img/new-1.png", alt="Купольная камера")
-        .news-item
-          .news-text
-            p Новая линейка 
-            p домофонов 
-            p с IPS дисплеем 
-          a(href="news.html") Подробнее
-          .new NEW
-          .news-item-image
-            img(src="img/new-2.png", alt="4-х канальный видеорегистратор cетевой")
-        .news-item
-          .news-text
-            p Вызывные панели 
-            p со встроенным 
-            p считывателем
-          a(href="news.html") Подробнее
-          .new NEW
-          .news-item-image
-            img(src="img/new-3.png", alt="ЛЕТНЯЯ АКЦИЯ")
+        each item in newsItem
+          .news-item
+            .news-text
+              p=item.text1
+              p=item.text2
+              p=item.text3
+            a(href="news.html")=item.a
+            .new=item.new
+            .news-item-image
+              img(src=item.img, alt=item.text3)
