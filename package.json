@@ -54,6 +54,7 @@
     "@fancyapps/fancybox": "^3.5.7",
     "jquery": "^3.4.1",
     "normalize.css": "^8.0.1",
+    "parsleyjs": "^2.9.2",
     "swiper": "^5.3.6",
     "yarn": "^1.22.4"
   }
