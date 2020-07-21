@@ -9,10 +9,7 @@
   },
   "author": "Alexey Kozyutenko",
   "license": "MIT",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/Apnoea/gulp-pug-template.git"
-  },
+  "repository": "https://github.com/Apnoea/gulp-pug-template.git",
   "devDependencies": {
     "@babel/core": "^7.9.0",
     "@babel/preset-env": "^7.9.5",
